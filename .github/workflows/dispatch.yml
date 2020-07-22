@@ -11,6 +11,10 @@ on:
         description: 'Branch to build'     
         required: true
         default: 'develop'
+      wpengineEnv:
+        description: 'wp env to build'     
+        required: true
+        default: 'staging'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,4 +30,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: echo Hello, workflow_dispatch! ${{ github.event.inputs.branch }} 
+    run: |
+      BRANCH=${{ github.event.inputs.branch }}
+      WPENGINE_ENV=${{ github.event.inputs.wpengineEnv }}
+      echo "Hello $BRANCH, $WPENGINE_ENV!"
