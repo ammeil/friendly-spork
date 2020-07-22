@@ -30,7 +30,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-    run: |
-      BRANCH=${{ github.event.inputs.branch }}
-      WPENGINE_ENV=${{ github.event.inputs.wpengineEnv }}
-      echo "Hello $BRANCH, $WPENGINE_ENV!"
+      run: |
+        BRANCH=${{ github.event.inputs.branch }}
+        WPENGINE_ENV=${{ github.event.inputs.wpengineEnv }}
+        echo "Hello $BRANCH, $WPENGINE_ENV!"
