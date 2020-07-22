@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-      description: 'Branch to build'     
-      required: true
-      default: 'develop'
+        description: 'Branch to build'     
+        required: true
+        default: 'develop'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
